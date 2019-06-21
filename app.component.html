@@ -1,0 +1,64 @@
+﻿<h1>WELCOME TO ANGULAR 6</h1>
+
+
+<table border="1">
+    <tr>
+        <th> Customer ID </th>
+        <th> Customer Name </th>
+        <th> Customer EmailID </th>
+        <th> Customer Phone Number </th>
+        <th> Customer Address </th>
+        <th> Customer City </th>
+        <th> Customer Country </th>
+    </tr>
+
+    <tr *ngFor="let customer of allCustomers; let i:index">
+        <th> {{customer.customerId}} </th>
+        <th> {{customer.customerFullName}} </th>
+        <th> {{customer.customerEmail}} </th>
+        <th> {{customer.customerPhoneNumber}} </th>
+        <th> {{customer.customerAddress}} </th>
+        <th> {{customer.customerCity}} </th>
+        <th> {{customer.country}} </th>
+        <td><input type="button" value="Edit" (click)="editCustomer(i)"/></td>
+        <td><input type="button" value="Delete" (click)="deleteCustomer(i)"/></td>
+    </tr>
+</table>
+         
+
+<table>
+    <tr>
+        <td>Customer ID</td>
+        <td><input type="text" [(ngModel)]="customer.customerId" ></td>
+    </tr>
+    <tr>
+        <td>Customer Name</td>
+        <td><input type="text" [(ngModel)]="customer.customerFullName" ></td>
+    </tr>
+    <tr>
+        <td>Customer Email ID</td>
+        <td><input type="text" [(ngModel)]="customer.customerEmail" ></td>
+    </tr>
+    <tr>
+        <td>Customer Phone Number</td>
+        <td><input type="text" [(ngModel)]="customer.customerPhoneNumber" ></td>
+    </tr>
+    <tr>
+        <td>Customer Address</td>
+        <td><input type="text" [(ngModel)]="customer.customerAddress" ></td>
+    </tr>
+    <tr>
+        <td>Customer City</td>
+        <td><input type="text" [(ngModel)]="customer.customerCity" ></td>
+    </tr>
+    <tr>
+        <td>Customer Country</td>
+        <td><input type="text" [(ngModel)]="customer.country" ></td>
+    </tr>
+
+    <tr>
+        <td>      </td>
+        <td> <input type="button" value="Add Customer" (click)="addCustomer()"></td>
+    </tr>
+</table>
+
